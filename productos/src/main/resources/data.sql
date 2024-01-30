@@ -1,0 +1,7 @@
+INSERT INTO products (id, name, category, price,color,peso, tamanio, empresa,url,disponible) VALUES (1,'Celular', 'Electrónico', 150.00, 'Black', '1kg', '40cm x 15cm', 'Apple' , 'https://images.pexels.com/photos/12339129/pexels-photo-12339129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', true);
+INSERT INTO products (id, name, category, price,color,peso, tamanio, empresa,url,disponible) VALUES (2,'Monitor', 'Electrónico', 500.00, 'White', '7kg', '500cm x 90cm', 'Apple' , 'https://images.pexels.com/photos/205316/pexels-photo-205316.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', true);
+INSERT INTO products (id, name, category, price,color,peso, tamanio, empresa,url,disponible) VALUES (3,'Pantalón', 'Ropa', 45.00, 'Black', '1kg', '50cm x 10cm', 'Zara' , 'https://images.pexels.com/photos/6003052/pexels-photo-6003052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', true);
+INSERT INTO products (id, name, category, price,color,peso, tamanio, empresa,url,disponible) VALUES (4,'Mouse', 'Electrónico', 50.00, 'Black', '1kg', '5cm x 10cm', 'Dell' , 'https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', true);
+INSERT INTO products (id, name, category, price,color,peso, tamanio, empresa,url,disponible) VALUES (5, 'Teclado', 'Electrónico', 30.00, 'White', '1kg', '30cm x 10cm', 'Dell' , 'https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', true);
+
+

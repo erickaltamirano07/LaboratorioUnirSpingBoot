@@ -56,9 +56,9 @@ public class CarritosController {
     }
 
     @PutMapping("/carritos/{id}")
-    public ResponseEntity<Carrito> putCarrito(@PathVariable String id) {
+    public ResponseEntity<Carrito> putCarrito(@PathVariable String id, @RequestBody @Valid CarritoRequest request) {
 
-        Carrito carrito = service.getCarrito(id);
+        Carrito carrito = service.putCarrito(id, request);
         if (carrito != null) {
             return ResponseEntity.ok(carrito);
         } else {

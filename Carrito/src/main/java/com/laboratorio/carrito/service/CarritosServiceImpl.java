@@ -5,7 +5,6 @@ import com.laboratorio.carrito.facade.ProductsFacade;
 import com.laboratorio.carrito.model.Product;
 import com.laboratorio.carrito.model.db.Carrito;
 import com.laboratorio.carrito.model.request.CarritoRequest;
-import jakarta.validation.constraints.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,14 +50,13 @@ public class CarritosServiceImpl implements CarritosService {
   public Carrito putCarrito(String id, CarritoRequest request)
   {
     Carrito carrito = repository.getById(Long.valueOf(id));
-    List<Product> products = request.getProducts().stream().map(productsFacade::getProduct).filter(Objects::nonNull).toList();
-    if (carrito != null) {
-
+    List<Product> products = request.getProducts().stream().map(productsFacade::getProduct).toList();
+    if (products.size() != request.getProducts().size()) {
+      return null;
+    } else {
       carrito.setProducts(products.stream().map(Product::getId).collect(Collectors.toList()));
       repository.save(carrito);
       return carrito;
-    } else {
-      return null;
     }
   }
 
